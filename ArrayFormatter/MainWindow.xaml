@@ -1,0 +1,67 @@
+﻿<Window x:Class="ArrayFormatter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArrayFormatter"
+        mc:Ignorable="d"
+        Title="Array Formatter" Height="480" Width="800" MinHeight="480" MinWidth="720" WindowStartupLocation="CenterScreen">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Input:" Padding="5,0,0,0"></Label>
+        <TextBox x:Name="inputTxtBx" Grid.Row="1" Margin="5,5,5,5" TextWrapping="NoWrap" AcceptsReturn="True"
+                 FontFamily="Courier New" FontWeight="Bold"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto" />
+        <Label Grid.Column="1" Content="Output:" Padding="5,0,0,0"></Label>
+        <TextBox x:Name="outputTxtBx" Grid.Column="1" Grid.Row="1" Margin="5,5,5,5" TextWrapping="NoWrap" AcceptsReturn="True"
+                 FontFamily="Courier New" FontWeight="Bold"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto" />
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Label Width="150">Old Horizontal Delimiter:</Label>
+            <TextBox x:Name="ohdTxtBox" Width="160" Margin="2"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <Label Width="150">Old Vertical Delimiter:</Label>
+            <TextBox x:Name="ovdTxtBox" Width="160" Margin="2"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal">
+            <Label Width="150">Remove Before:</Label>
+            <TextBox x:Name="removeBeforeTxtBox" Width="160" Margin="2"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Orientation="Horizontal">
+            <Label Width="150">Remove After:</Label>
+            <TextBox x:Name="removeAfterTxtBox" Width="160" Margin="2"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+            <Label Width="150">New Horizontal Delimiter:</Label>
+            <TextBox x:Name="nhdTxtBox" Width="160" Margin="2"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+            <Label Width="150">New Vertical Delimiter:</Label>
+            <TextBox x:Name="nvdTxtBox" Width="160" Margin="2"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="1"  Orientation="Horizontal">
+            <Label Width="150">Add Before:</Label>
+            <TextBox x:Name="addBeforeTxtBox" Width="160" Margin="2"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="1"  Orientation="Horizontal">
+            <Label Width="150">Add After:</Label>
+            <TextBox x:Name="addAfterTxtBox" Width="160" Margin="2"></TextBox>
+        </StackPanel>
+        <Button Grid.Row="6" Grid.ColumnSpan="2" Margin="2" HorizontalAlignment="Center" Width="140" Click="ProcessButton_Click">Process</Button>
+    </Grid>
+</Window>
